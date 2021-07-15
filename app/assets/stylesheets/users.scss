@@ -1,0 +1,137 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.url {
+    color: darkred;
+}
+
+.headlines {
+    color: darkred;
+    font-weight: bold;
+}
+
+header {
+    background-color: darkred;
+    img {
+        display: inline-block;
+        width: 300px;
+        height: 100px;
+        vertical-align: middle;
+    }
+    h1 {
+        display: inline-block;
+        color: white;
+        vertical-align: middle;
+    }
+    div {
+        display: inline-block;
+        margin-left: 375px;
+        ul {
+            display: block;
+            li {
+                display: inline;
+                font-weight: bold;
+                color: white;
+                a { 
+                    color: goldenrod;
+                }
+            }
+        }
+        form {
+            display: block;
+            margin-left: 88px;
+            input[type=text] {
+                display: inline;
+            }
+            input[type=submit] {
+                display: inline;
+                background-color: darkred;
+                border: solid white 3px;
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+#menu {
+    background-image: linear-gradient(white, whitesmoke);
+    padding: 12px 15px;
+    ul {
+        display: inline;
+        li {
+            display: inline;
+            padding: 8px 20px;
+            border-right: solid gray 1px;
+            a {
+                color: gray;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+#main-content {
+    #left-menu {
+        display: inline-block;
+        vertical-align: top;
+        margin: 30px;
+        background-color: lightgray;
+        border: solid gray 2px;
+        width: 250px;
+
+        ul{
+            list-style-type: none;
+            li {
+                color: darkred;
+                margin-bottom: 10px;
+                a {
+                    @extend .url;
+                }
+            }
+        }
+    }
+
+    #content {
+        display: inline-block;
+        vertical-align: top;
+        width: 950px;
+        margin-left: 20px;
+        h2, h3 {
+            @extend .headlines;
+        }
+        p {
+            span {
+                text-decoration: underline;
+                color: darkred;
+            }
+        }
+        ul {
+            li {
+                span {
+                    font-weight: bold;
+                }
+                a {
+                    @extend .url;
+                }
+            }
+        }
+        ol {
+            li {
+                a {
+                    @extend .url;
+                }
+            }
+        }
+    }
+}
